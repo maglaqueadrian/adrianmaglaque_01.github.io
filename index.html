@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adrian Maglaque</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Diphylleia&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+  </head>
+  <body>
+    <div class="intro" id="intro">
+      <div class="darkmode-con">
+        <button id="darkmode" class="d1">
+          <span class="material-symbols-outlined"> dark_mode </span>
+        </button>
+        <button onclick="cupid()" id="playbutton2">
+          <span class="material-symbols-outlined" id="play"> play_arrow </span>
+        </button>
+        <button id="close" onclick="self.close()">
+          <span class="material-symbols-outlined"> close </span>
+        </button>
+      </div>
+      <img src="face.png" alt="" width="200px" height="350px" id="face" />
+      <p>
+        My name is&nbsp;
+        <img
+          src="speaker-logo.svg"
+          alt="speaker-logo"
+          width="20px"
+          height="20px"
+          id="speaker"
+          onclick="EZSounds()"
+        />
+        &nbsp;Adrian Maglaque.
+      </p>
+      <p>
+        <span id="age"></span> Years Old, Self Taught Programmer | Entrepreneur
+        | Manila-Born, with Ambitious Tendencies.
+      </p>
+
+      <br />
+      <!--<br />>
+      <p>This is my favorite music:</p>
+
+      <!-- <p>Kill Bill by SZA:</p>
+      <button onclick="killbill()" id="playbutton">
+        Kill Bill &lt;3 click to play the music
+      </button> -->
+
+      <p>I am a computer scientist</p>
+    </div>
+
+    <!-- ADRIAN MAGLAQUE PRONOUNCIATION SOUND-->
+    <audio src="Adrian Maglaque MP3.mp3" id="adrianmaglaquemp3"></audio>
+
+    <!-- FAVORITE MUSIC SOUNDS-->
+    <audio src="Kill Bill.mp3" id="killbill"></audio>
+    <audio
+      src="FIFTY FIFTY - Cupid (sped up) Twin Version (Lyrics).mp3"
+      id="cupid"
+    ></audio>
+    <span class="material-symbols-outlined" id="pause"> </span>
+    <script src="index.js"></script>
+    <script>
+      window.onload = () => {
+        const birthYear = 2004;
+        const currentYear = new Date().getFullYear();
+        const age =
+          new Date() > new Date(`6/24/${currentYear}`)
+            ? currentYear - birthYear
+            : currentYear - birthYear - 1;
+        document.getElementById("age").innerText = `${age}`;
+      };
+    </script>
+  </body>
+</html>
